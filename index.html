@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="">
+	 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+		<style type="text/css">
+			.panel-heading h3 {
+			    white-space: nowrap;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    line-height: normal;
+			    width: 75%;
+			    padding-top: 8px;
+			}
+		</style>
+  </head>
+
+<body ng-controller="DocumentController" >
+<nav class="navbar navbar-default">
+	    <div class="navbar-header">
+
+			 <a class="navbar-brand" href="#">Binary Term Incident Matrix</a>
+		</div>
+</nav>
+		<div class="container" ng-cloak >
+			<div class="row">
+				<div class="col-sm-6">
+					<div class="panel panel-default">
+					    <div class="panel-heading">
+					        <div class="col-sm-6">
+					        	<h3 class="panel-title pull-left">Number of documents</h3>
+					        </div>
+					        <div class="col-sm-6 pull-right">
+					        	<input type="number" ng-model="docnum" ng-min="2" ng-max="10" min="2" max="10" class="form-control pull-right" />
+					        </div>
+					        <div class="clearfix"></div>
+					    </div>
+					    <div class="panel-body">
+							<div class="form-group" ng-repeat="i in newArray() track by $index">
+							<div class="row">
+								<div class="col-sm-4">
+									<input placeholder="Doc Name {{ $index +1 }}" type="text" class="form-control" ng-model="doc[ $index ]['name']">
+								</div>
+								<div class="col-sm-8">
+									<textarea placeholder="Doc {{ $index +1 }} content" class="form-control col-sm-10" ng-model="doc[ $index ]['data']"></textarea>
+								</div>
+							</div>
+							<hr>
+							</div>
+					    </div>
+					</div>
+				</div>
+				<div class="col-sm-6">
+				<div class="row">
+					
+							<div class="col-sm-12">
+								<input type="text" class="form-control" ng-model="query" placeholder="<token1> | <token2> & (! <token3>)" />
+							</div>
+							<hr>
+							<div class="col-sm-12">
+								<button type="button" class="btn btn-danger" ng-click="apply()" ng-disabled="making">{{ making ? 'Making' : 'Make' }} Extraction</button>	
+							</div>
+							<hr>
+							<div class="col-sm-12">
+								<hr>
+								<h4 ng-if="processDone">
+									 
+									{{ resultDocs ? "The Query satsfies documents => " + resultDocs +"." : " No document satisfies current Query."   }}
+								</h4>
+							</div>
+							<div ng-if="processDone" class="col-sm-12">
+								<table class="table">
+					        		<tr>
+					        			<th>Tokens</th>
+					        			<th ng-repeat="p in documentColumns track by $index"> {{ p }}
+					        			</th>
+					        		</tr>
+					        		
+					        		<tr ng-repeat="t in allTokens track by $index">
+					        			<td>{{ t }}</td>
+					        			<td ng-repeat="v in matrix[t] track by $index">
+					        					{{ v }}
+					        			</td>
+					        		</tr>
+					        	</table>
+					      	</div>
+				</div>
+
+				</div>
+			</div>
+		</div>
+	<script type="text/javascript" src="./index.js"></script>
+</body>
+</html>
