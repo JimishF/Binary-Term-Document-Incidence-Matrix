@@ -1,7 +1,7 @@
-# Binary Term Document Index Matrix
-<p>Binary Term Document Index Matrix is a well known solution model for <a href="http://nlp.stanford.edu/IR-book/html/htmledition/an-example-information-retrieval-problem-1.html">Information Retrival Problem</a>. <br>
+# Binary Term Document Incidence Matrix
+<p>Binary Term Document Incidence Matrix is a well known solution model for <a href="http://nlp.stanford.edu/IR-book/html/htmledition/an-example-information-retrieval-problem-1.html">Information Retrival Problem</a>. <br>
 The Boolean retrieval model is a model for information retrieval in which we can pose any query which is in the form of a Boolean expression of terms, that is, in which terms are combined with the operators and ( &amp; ) , or ( | ) , and not( ! ). The model views each document as just a set of words. </p>
-see live demo <a href="jimishf.github.io/Binary-Term-Document-Index-Matrix/index.html">here</a> 
+see live demo <a href="jimishf.github.io/Binary-Term-Document-Incidence-Matrix/index.html">here</a> 
    
    <h3>Steps to follow</h3>
 	<ol>
