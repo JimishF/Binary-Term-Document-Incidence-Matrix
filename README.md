@@ -11,16 +11,19 @@ see live demo <a href="jimishf.github.io/Binary-Term-Document-Incidence-Matrix/i
 	</ol>
 	
 <h3> Rules for query </h3>
+--------------------------
 * You can use opeartors & for Logical AND, | for logical OR, ! for Logical NOT		
 * You need to put tokens in between tags ( Example. &lt;token&gt; )
 * You can use only Round Brackets <b>(</b>  <b>)</b> for evaluation priority of the sub expression.
-<h3> Query Exmaple </h3>
 
-		// query in layman terms.
-		Brutus AND Caesar AND NOT Calpurnia
-		
-		//query for this application
-		<Brutus> & <Caesar> & !<Calpurnia>
-				or
-		(<Brutus> & <Caesar>) & (!<Calpurnia>)
+<br>
+<h3>Query Exmaple </h3>
+----------------------------
+	// query in layman terms.
+	Brutus AND Caesar AND NOT Calpurnia
+	
+	//query for this application
+	<Brutus> & <Caesar> & !<Calpurnia>
+			or
+	(<Brutus> & <Caesar>) & (!<Calpurnia>)
 		
