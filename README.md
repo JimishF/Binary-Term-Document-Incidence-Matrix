@@ -9,16 +9,17 @@ see live demo <a href="jimishf.github.io/Binary-Term-Document-Incidence-Matrix/i
 		<li>	Give Names to those docs. and provide appropriate content of it.</li>
 		<li> 	Type your Query and Hit apply.</li>
 	</ol>
-	
+
+--------------------------	
 <h3> Rules for query </h3>
---------------------------
+
 * You can use opeartors & for Logical AND, | for logical OR, ! for Logical NOT		
 * You need to put tokens in between tags ( Example. &lt;token&gt; )
 * You can use only Round Brackets <b>(</b>  <b>)</b> for evaluation priority of the sub expression.
-
 <br>
-<h3>Query Exmaple </h3>
 ----------------------------
+<h3>Query Exmaple </h3>
+
 	// query in layman terms.
 	Brutus AND Caesar AND NOT Calpurnia
 	
