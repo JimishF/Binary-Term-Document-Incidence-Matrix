@@ -17,7 +17,7 @@ see live demo <a href="jimishf.github.io/Binary-Term-Document-Incidence-Matrix/i
 * You need to put tokens in between tags ( Example. &lt;token&gt; )
 * You can use only Round Brackets <b>(</b>  <b>)</b> for evaluation priority of the sub expression.
 <br>
-----------------------------
+
 <h3>Query Exmaple </h3>
 
 	// query in layman terms.
